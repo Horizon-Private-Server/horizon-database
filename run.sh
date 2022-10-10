@@ -2,11 +2,10 @@
 
 echo "Starting database container ..."
 docker run \
-  -d \
+  -it \
   --rm \
-  -v "${PWD}/data/":/var/opt/mssql/data \
-  -v "${PWD}/logs/":/var/opt/mssql/log \
-  -v "${PWD}/secrets/":/var/opt/mssql/secrets \
+  --user root \
+  -v "${PWD}/data/":/var/opt/mssql \
   -e ACCEPT_EULA="True" \
   -e MSSQL_SA_PASSWORD=${HORIZON_MSSQL_SA_PASSWORD} \
   -p 1433:1433 \
