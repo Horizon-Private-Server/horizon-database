@@ -2,7 +2,7 @@
 
 echo "Starting database container ..."
 docker run \
-  -it \
+  -d \
   --rm \
   --user root \
   -v "${PWD}/data/":/var/opt/mssql \
