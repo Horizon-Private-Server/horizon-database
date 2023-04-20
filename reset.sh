@@ -1,3 +1,6 @@
-rm -rf data
-rm -rf logs
-rm -rf secrets
+#!/bin/bash
+set -e
+
+docker container kill horizon-database
+sudo rm -rf data
+bash run.sh
