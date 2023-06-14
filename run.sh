@@ -1,4 +1,7 @@
 
+docker container kill horizon-database
+sleep 1
+set -e
 
 echo "Starting database container ..."
 docker run \

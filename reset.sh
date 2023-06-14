@@ -1,6 +1,7 @@
 #!/bin/bash
-set -e
 
 docker container kill horizon-database
+set -e
+
 sudo rm -rf data
 bash run.sh
