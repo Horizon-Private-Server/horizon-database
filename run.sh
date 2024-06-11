@@ -9,6 +9,7 @@ docker run \
   --rm \
   --user root \
   -v "${PWD}/data/":/var/opt/mssql \
+  -v "${PWD}/backup/":/backup \
   -e ACCEPT_EULA="True" \
   -e MSSQL_SA_PASSWORD=${HORIZON_MSSQL_SA_PASSWORD} \
   -p 1433:1433 \
